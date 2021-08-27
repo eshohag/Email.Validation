@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	
+	  <TargetFramework>netstandard2.1</TargetFramework>
+
+	  <PackageId>Email.Validation</PackageId>
+	  <PackageVersion>1.0.0-beta</PackageVersion>
+	  <Description>Email.Validation in c# .net standard 2.1 to validate emails for syntax, domain/MX record and handshake with email server to validate email addresses informations</Description>
+	  <Authors>eShohag</Authors>
+	  <Company></Company>
+	  <Product>AspNet</Product>
+	  <Copyright>©eShohag. All rights reserved.</Copyright>
+	  <PackageProjectUrl>https://github.com/eshohag/Email.Validation</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/eshohag/Email.Validation</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>Email.Validation;EmailValidation; EmailValidation.NET; EmailValidationNET; GmailValidation; OutlookValidation; Email; Validation;</PackageTags>
+	  <PackageReleaseNotes>https://github.com/eshohag/Email.Validation</PackageReleaseNotes>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <developmentDependency>true</developmentDependency>
+	  <PackageLicenseFile>LicenseInfo.txt</PackageLicenseFile>
+	  <PackageIcon>net.png</PackageIcon>
+	  
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="DnsClient" Version="1.5.0" />
+
+	  <None Include="..\..\..\..\..\Downloads\LicenseInfo.txt">
+		  <Pack>True</Pack>
+		  <PackagePath></PackagePath>
+	  </None>
+	  <None Include="..\..\..\..\..\Downloads\net.png">
+		  <Pack>True</Pack>
+		  <PackagePath></PackagePath>
+	  </None>
+  </ItemGroup>
+
+</Project>
