@@ -9,9 +9,9 @@ using System.Text.RegularExpressions;
 
 namespace Email.Validation
 {
-    public abstract class EMail
+    public abstract class EmailInfo
     {
-        public static Response IsValidEmail(string email)
+        public static Response Validation(string email)
         {
             var isSyntaxValidEmail = ValidateEmail(email, ValidationModeEnum.Syntax);
             var mailServers = GetNetworkValidation(isSyntaxValidEmail, email);
@@ -35,7 +35,7 @@ namespace Email.Validation
             return result;
         }
 
-        private static bool ValidateEmail(string emailAddress, ValidationModeEnum validationMode, bool isSyntexValid = false, List<MailServer> mailServers = null)
+        private static bool ValidateEmail(string emailAddress, ValidationModeEnum validationMode, bool isSyntexValid = false, List<Server> mailServers = null)
         {
             string getLastError = String.Empty;
 
@@ -129,12 +129,12 @@ namespace Email.Validation
             }
         }
 
-        private static List<MailServer> GetNetworkValidation(bool isSyntaxValidEmail, string emailAddress)
+        private static List<Server> GetNetworkValidation(bool isSyntaxValidEmail, string emailAddress)
         {
             if (!isSyntaxValidEmail)
                 return null;
 
-            var servers = new List<MailServer>();
+            var servers = new List<Server>();
             var client = new LookupClient();
 
             string[] arrHost = emailAddress.Split('@');
@@ -143,7 +143,7 @@ namespace Email.Validation
             foreach (var item in result.Answers)
             {
                 var X = item as DnsClient.Protocol.MxRecord;
-                servers.Add(new MailServer() { ServerName = X.Exchange, Preference = X.Preference });
+                servers.Add(new Server() { ServerName = X.Exchange, Preference = X.Preference });
             }
             return servers.OrderBy(a => a.Preference).ToList();
         }

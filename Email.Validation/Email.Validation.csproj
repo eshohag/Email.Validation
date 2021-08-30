@@ -2,11 +2,11 @@
 
   <PropertyGroup>
 	
-	  <TargetFramework>netstandard2.1</TargetFramework>
+	  <TargetFramework>netstandard2.0</TargetFramework>
 
 	  <PackageId>Email.Validation</PackageId>
-	  <PackageVersion>1.0.0-beta</PackageVersion>
-	  <Description>Email.Validation in c# .net standard 2.1 to validate emails for syntax, domain/MX record and handshake with email server to validate email addresses informations</Description>
+	  <PackageVersion>1.0.3-beta</PackageVersion>
+	  <Description>Email.Validation in C# .net standard 2.0 to validate Email- Syntax, Domain/MX record and Handshake with Email server to validate Email addresses information</Description>
 	  <Authors>eShohag</Authors>
 	  <Company></Company>
 	  <Product>AspNet</Product>
@@ -14,7 +14,7 @@
 	  <PackageProjectUrl>https://github.com/eshohag/Email.Validation</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/eshohag/Email.Validation</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageTags>Email.Validation;EmailValidation; EmailValidation.NET; EmailValidationNET; GmailValidation; OutlookValidation; Email; Validation;</PackageTags>
+	  <PackageTags>Email.Validation,EmailValidation,EmailValidation.NET,EmailValidationNET,GmailValidation,OutlookValidation,Email,Validation</PackageTags>
 	  <PackageReleaseNotes>https://github.com/eshohag/Email.Validation</PackageReleaseNotes>
 	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 	  <developmentDependency>true</developmentDependency>

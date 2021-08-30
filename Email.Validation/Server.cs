@@ -1,6 +1,6 @@
 ﻿namespace Email.Validation
 {
-    internal class MailServer
+    internal class Server
     {
         public string ServerName { get; set; }
         public ushort Preference { get; set; }
